@@ -1,21 +1,25 @@
 .badge {
-    background-color: tomato;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    color: white;
-    font-weight: 600;
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: white;
+  font-weight: 600;
+}
+
+.non-badge {
+  opacity: 0;
 }
 
 .dot {
-    background-color: tomato;
-    width: 7px;
-    height: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
+  background-color: tomato;
+  width: 7px;
+  height: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
 }

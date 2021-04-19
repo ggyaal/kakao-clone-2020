@@ -1,6 +1,7 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 500vh;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 #chat-screen .alt-header,
@@ -42,6 +43,39 @@
   width: 100%;
   display: flex;
   margin-bottom: 25px;
+  opacity: 0;
+}
+
+.message-row:not(.message-row--own) {
+  animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.message-row:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.message-row:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.message-row:nth-child(4) {
+  animation-delay: 1.4s;
+}
+
+.message-row:nth-child(5) {
+  animation-delay: 1.6s;
+}
+
+.message-row:nth-child(6) {
+  animation-delay: 1.8s;
+}
+
+.message-row:nth-child(7) {
+  animation-delay: 2s;
+}
+
+.message-row:nth-child(8) {
+  animation-delay: 2.2s;
 }
 
 .message-row img {
@@ -78,10 +112,11 @@
 
 .message-row--own {
   justify-content: flex-end;
+  animation: fadeInRight 1s ease-in-out forwards;
 }
 
 .message-row--own .message__bubble {
-  background-color: var(--yellow);
+  background-color: var(--brown);
   border-top-right-radius: 0px;
   border-top-left-radius: 15px;
   margin-right: 0px;
@@ -140,7 +175,7 @@
 }
 
 .reply__column button {
-  background-color: var(--yellow);
+  background-color: var(--brown);
   border: none;
   width: 40px;
   height: 40px;
@@ -183,5 +218,27 @@
   to {
     transform: none;
     opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px) rotate(-20deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
